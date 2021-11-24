@@ -21,7 +21,7 @@ async function getPhotos() {
 
 getPhotos().then(photos => {
     let myPhotosHtml = photos.map(photo => {
-        return `<img src="https://picsum.photos/id/${photo.id}/100/100" alt="${photo.title}"/>`
+        return `<img class= "my-photo" src="https://picsum.photos/id/${photo.id}/100/100" alt="${photo.title}"/>`
     }).join('')
     console.log(myPhotosHtml)
     

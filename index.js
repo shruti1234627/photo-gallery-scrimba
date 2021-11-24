@@ -13,6 +13,7 @@
             Each photo should be at least 1rem away from the photos around it
 */
 
+
 async function getPhotos() {
     let response = await fetch("photos.json")
     let photos = await response.json()
@@ -29,5 +30,8 @@ function getPhotosHtml(photos) {
 }
 
 getPhotos().then(photos => {    
-    document.body.innerHTML = getPhotosHtml(photos)    
+    document.body.innerHTML = `<div class="my-gallery">
+        <img class="my-photo" id="my-selected-photo" src="https://picsum.photos/id/1/200/200" />
+        ${getPhotosHtml(photos)}
+    </div>`    
 })

@@ -1,2 +1,2 @@
-# photo-galley-scrimba
+# photo-gallery-scrimba
 Flexbox and Fetch
